@@ -9,9 +9,9 @@ Create an object `GpioExpander` to communicate with a particular GpioExpander bo
 The constructor for GpioExpander class. The `i2c_address` specifies the board
 I²C address which is `42` factory-default but can be changed programmatically.
 
-### `pin_mode(pin: int, value: int) -> None`
+### `pin_mode(pin: int, mode: int) -> None`
 
-Configures state the `pin`:
+Configures the operation `mode` of the `pin`:
 
 - INPUT
 - INPUT_PULLUP
