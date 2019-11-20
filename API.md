@@ -26,7 +26,7 @@ Reads the analog value from one pin of board. Return value in range from `0` to 
 
 Reads the bit value from one pin of board. Return `0` or `1` value.
 
-### `digital_write(pin: int) -> None`
+### `digital_write(pin: int, value: int) -> None`
 
 Write `1` or `0` value to a `pin`.
 
