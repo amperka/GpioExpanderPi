@@ -2,11 +2,11 @@
 
 ## `class GpioExpander`
 
-Create an object `GpioExpander` to communicate with a particular GpioExpander boards.
+Create an object `GpioExpander` to communicate with a particular board based on Amperka GPIO expander. The end-user libraries often wrap (or inherit) this class to provide domain-specific high level hardware interaction methods.
 
 ### `GpioExpander(i2c_address=42)`
 
-The constructor for GpioExpander class. The `i2c_address` specifies the board
+Constructor. The `i2c_address` specifies the board
 I²C address which is `42` factory-default but can be changed programmatically.
 
 ### `pin_mode(pin: int, mode: int) -> None`
