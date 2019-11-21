@@ -6,39 +6,38 @@ Create an object `GpioExpander` to communicate with a particular board based on 
 
 ### `GpioExpander(i2c_address=42)`
 
-Constructor. The `i2c_address` specifies the board
-I²C address which is `42` factory-default but can be changed programmatically.
+Constructor. The `i2c_address` specifies the board I²C address which is `42` factory-default but can be changed programmatically.
 
 ### `pin_mode(pin: int, mode: int) -> None`
 
 Configures the operation `mode` of the `pin`:
 
-- INPUT
-- INPUT_PULLUP
-- INPUT_PULLDOWN
-- OUTPUT
+- GPIO.INPUT
+- GPIO.INPUT_PULLUP
+- GPIO.INPUT_PULLDOWN
+- GPIO.OUTPUT
+
+These constants are static members of the `GPIO` class.
 
 ### `analog_read(pin: int) -> float`
 
 Reads the analog value from one pin of board. Return value in range from `0` to `1.0`.
 
-### `digital_read(pin: int) -> int`
+### `digital_read(pin: int) -> bool`
 
-Reads the bit value from one pin of board. Return `0` or `1` value.
+Reads the bit value from one pin of board. Return `GPIO.HIGH` or `GPIO.LOW` value. This values defined as `True` and `False` respectively.
 
-### `digital_write(pin: int, value: int) -> None`
+### `digital_write(pin: int, value: bool) -> None`
 
-Write `1` or `0` value to a `pin`.
+Write `GPIO.HIGH` or `GPIO.LOW` value to a `pin`. This values defined as `True` and `False` respectively.
 
-### `analog_write(pin: int, value: int) -> None`
+### `analog_write(pin: int, value: float) -> None`
 
-Writes an analog value from `0` to `255` (PWM wave) to a `pin`.
+Writes an analog value from `0` to `1.0` (PWM wave) to a `pin`.
 
 ### `change_address(new_address: int) -> None`
 
-Changes the I²C address of the module. The change is in effect only while the
-board is powered on. If you want to save it permanently call the `save_address`
-method.
+Changes the I²C address of the module. The change is in effect only while the board is powered on. If you want to save it permanently call the `save_address` method.
 
 ### `save_address() -> None`
 
