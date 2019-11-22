@@ -8,16 +8,14 @@ Create an object `GpioExpander` to communicate with a particular board based on 
 
 Constructor. The `i2c_address` specifies the board I²C address which is `42` factory-default but can be changed programmatically.
 
-### `pin_mode(pin: int, mode: int) -> None`
+### `pin_mode(pin: int, mode: PinMode) -> None`
 
 Configures the operation `mode` of the `pin`:
 
-- GPIO.INPUT
-- GPIO.INPUT_PULLUP
-- GPIO.INPUT_PULLDOWN
-- GPIO.OUTPUT
-
-These constants are static members of the `GPIO` class.
+- PinMode.INPUT
+- PinMode.INPUT_PULLUP
+- PinMode.INPUT_PULLDOWN
+- PinMode.OUTPUT
 
 ### `analog_read(pin: int) -> float`
 
@@ -43,9 +41,9 @@ Changes the I²C address of the module. The change is in effect only while the b
 
 Permanently saves the current board I²C address.
 
-### `set_pwm_freq(value: int) -> None`
+### `set_pwm_freq(freq: int) -> None`
 
-Sets the PWM frequency for the analog output.
+Sets the PWM frequency for the analog output. The `freq` must be in range from `30`(Hz) to `65535`(Hz).
 
 ### `reset() -> None`
 
