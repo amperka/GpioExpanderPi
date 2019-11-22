@@ -33,7 +33,7 @@ Write `GPIO.HIGH` or `GPIO.LOW` value to a `pin`. This values defined as `True` 
 
 ### `analog_write(pin: int, value: float) -> None`
 
-Writes an analog value from `0` to `1.0` (PWM wave) to a `pin`.
+Outputs PMW signal on a `pin`. The `value` argument specifies the duty cycle and should be in the range from `0.0` to `1.0`
 
 ### `change_address(new_address: int) -> None`
 
@@ -43,7 +43,7 @@ Changes the I²C address of the module. The change is in effect only while the b
 
 Permanently saves the current board I²C address.
 
-### `pwm_freq(value: int) -> None`
+### `set_pwm_freq(value: int) -> None`
 
 Sets the PWM frequency for the analog output.
 
