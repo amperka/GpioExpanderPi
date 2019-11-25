@@ -19,7 +19,7 @@ Configures the operation `mode` of the `pin`:
 
 ### `analog_read(pin: int) -> float`
 
-Reads the analog value from one pin of board. Return value in range from `0` to `1.0`.
+Reads the analog value from one pin of board. Return value in range from `0.0` to `1.0`.
 
 ### `digital_read(pin: int) -> bool`
 
