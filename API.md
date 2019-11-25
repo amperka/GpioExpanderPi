@@ -23,11 +23,11 @@ Reads the analog value from one pin of board. Return value in range from `0` to 
 
 ### `digital_read(pin: int) -> bool`
 
-Reads the bit value from one pin of board. Return `GPIO.HIGH` or `GPIO.LOW` value. This values defined as `True` and `False` respectively.
+Reads the bit value from one pin of board. Return `True` or `False` value.
 
 ### `digital_write(pin: int, value: bool) -> None`
 
-Write `GPIO.HIGH` or `GPIO.LOW` value to a `pin`. This values defined as `True` and `False` respectively.
+Write `True` or `False` value to a `pin`.
 
 ### `analog_write(pin: int, value: float) -> None`
 
@@ -43,7 +43,7 @@ Permanently saves the current board I²C address.
 
 ### `set_pwm_freq(freq: int) -> None`
 
-Sets the PWM frequency for the analog output. The `freq` must be in range from `30`(Hz) to `65535`(Hz).
+Sets a PWM frequency (in hertz) for all PWM outputs of the GPIO expander. The `freq` argument should be in the range from `30` to `65535`.
 
 ### `reset() -> None`
 
