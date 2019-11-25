@@ -23,11 +23,11 @@ Reads the analog value from one pin of board. Return value in range from `0.0` t
 
 ### `digital_read(pin: int) -> bool`
 
-Reads the bit value from one pin of board. Return `True` or `False` value.
+Reads a digital signal value from a pin of the board. Returns `True` or `False`.
 
 ### `digital_write(pin: int, value: bool) -> None`
 
-Write `True` or `False` value to a `pin`.
+Outputs digital signal (`True` or `False`) on a `pin`.
 
 ### `analog_write(pin: int, value: float) -> None`
 
